@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar User</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Modul User</a></li>
+            <li><a href="../Login/Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>DAFTAR USER</h1>
+        <div class="atas">
+            <button class="tambah" id="tambah">Tambah</button>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="tabel">
+            <table >
+                <tr>
+                    <th colspan="4">Tabel User</th>
+                </tr>
+                <tr>
+                    <th>NO</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+                <tr style="text-align: center;">
+                    <td>1</td>
+                    <td>Nanda</td>
+                    <td>Jungler</td>
+                    <td>
+                        <button class="edit" id="edit">Edit</button>
+                        <button class="hapus">Hapus</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="modal" id="modal">
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Tambah User</legend>
+                <p>
+                    <label>Nama Lengkap</label>
+                    <input type="text" name="nama" placeholder="Nama Lengkap..">
+                </p>
+                 <p>
+                    <Label>Tempat Lahir</Label>
+                    <input type="text" name="tempat_lahir" placeholder="Tempat Lahir..">
+                </p>
+                <p>
+                    <label >Tanggal Lahir</label>
+                    <input type="date" name="Tanggal">
+                </p>
+                <p>
+                    <label>Jenis Kelamin</label>
+                    <label><input type="radio" name="jenis_kelamin" value="laki-laki">Laki-Laki</label>
+                    <label><input type="radio" name="jenis_kelamin" value="perempuan">Perempuan</label>
+                </p>
+                <p>
+                    <label>Alamat Lengkap</label>
+                    <input type="text" name="alamat" placeholder="Alamat Lengkap..">
+                </p>
+                <p>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Your Email">
+                </p>
+                <p>
+                    <label for="">No Telepon</label>
+                    <input type="number" name="telepon" placeholder="No Telepon">
+                </p>
+                <p>
+                   <button class="rubah">Simpan</button> 
+                </p>
+            </fieldset>   
+        </form>
+    </section>
+    
+</body>
+</html>
+<script>
+    // Get the modal
+    var modal = document.getElementById("modal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("tambah");
+    var edit = document.getElementById("edit");
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "flex";
+    }
+    edit.onclick = function() {
+      modal.style.display = "flex";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
